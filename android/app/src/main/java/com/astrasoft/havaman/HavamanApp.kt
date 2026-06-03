@@ -14,6 +14,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -140,6 +141,7 @@ private fun Header() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SearchSection(value: TextFieldValue, onValueChange: (TextFieldValue) -> Unit, onSearch: () -> Unit) {
     Column {
@@ -150,10 +152,9 @@ private fun SearchSection(value: TextFieldValue, onValueChange: (TextFieldValue)
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color(0x16FFFFFF), RoundedCornerShape(18.dp)),
+            textStyle = TextStyle(color = Color.White),
             colors = TextFieldDefaults.textFieldColors(
                 containerColor = Color(0x14FFFFFF),
-                textColor = Color.White,
-                placeholderColor = Color(0x80FFFFFF),
                 cursorColor = Color(0xFFB8E0FF)
             )
         )
