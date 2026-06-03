@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-b from-[#061826] via-[#07121a] to-[#021018] text-slate-100;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Glassmorphism card */
+.card-glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px) saturate(120%);
+}
+
+.neon-red { box-shadow: 0 6px 30px rgba(255,48,48,0.14), inset 0 0 1px rgba(255,48,48,0.2); }
+.neon-yellow { box-shadow: 0 6px 30px rgba(255,204,0,0.12); }
+.neon-cyan { box-shadow: 0 6px 30px rgba(0,200,255,0.12); }

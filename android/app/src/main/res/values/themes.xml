@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.Havaman" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
