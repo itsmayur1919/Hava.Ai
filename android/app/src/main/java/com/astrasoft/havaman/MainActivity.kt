@@ -45,6 +45,12 @@ class MainActivity : ComponentActivity() {
                     try {
                         val task = GoogleSignIn.getSignedInAccountFromIntent(data)
                         val acct = task.getResult(ApiException::class.java)
+                        
+                        // Set the Google ID token for backend authentication
+                        acct.idToken?.let { token ->
+                            BackendApi.setGoogleIdToken(token)
+                        }
+                        
                         account = acct
                         // fetch location after sign-in
                         fetchLocation(account)
@@ -62,6 +68,7 @@ class MainActivity : ComponentActivity() {
                 },
                 onSignOut = {
                     googleClient.signOut()
+                    BackendApi.clearAuthentication()
                     account = null
                 },
                 onFetchLocation = { fetchLocation(account) }
