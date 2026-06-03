@@ -11,7 +11,6 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.Query
 
 // Use emulator loopback by default. If testing on device, replace with backend host.
@@ -19,17 +18,10 @@ private const val BASE_URL = "http://10.0.2.2:8000/"
 
 interface ApiService {
     @GET("api/location/search")
-    suspend fun searchLocation(
-        @Query("q") q: String,
-        @Header("Authorization") authToken: String? = null
-    ): List<LocationDto>
+    suspend fun searchLocation(@Query("q") q: String): List<LocationDto>
 
     @GET("api/weather/wisdom")
-    suspend fun getWeatherWisdom(
-        @Query("lat") lat: Double,
-        @Query("lon") lon: Double,
-        @Header("Authorization") authToken: String? = null
-    ): WeatherWisdomDto
+    suspend fun getWeatherWisdom(@Query("lat") lat: Double, @Query("lon") lon: Double): WeatherWisdomDto
 }
 
 data class LocationDto(
@@ -94,12 +86,12 @@ object BackendApi {
     }
 
     suspend fun searchLocation(query: String): List<LocationSearchResult> = withContext(Dispatchers.IO) {
-        val res = service.searchLocation(query, googleIdToken?.let { "Bearer $it" })
+        val res = service.searchLocation(query)
         res.map { LocationSearchResult(it.name, it.latitude, it.longitude, it.country) }
     }
 
     suspend fun fetchWeatherWisdom(lat: Double, lon: Double): WeatherWisdom = withContext(Dispatchers.IO) {
-        val dto = service.getWeatherWisdom(lat, lon, googleIdToken?.let { "Bearer $it" })
+        val dto = service.getWeatherWisdom(lat, lon)
         WeatherWisdom(dto.healthCard, dto.travelCard, dto.clothingCard, WisdomMeta(dto.meta.aqi, dto.meta.uv, dto.meta.temp))
     }
 }

@@ -114,159 +114,67 @@ fun SignInScreen(
     onSignOut: () -> Unit,
     onFetchLocation: () -> Unit
 ) {
-    // Weather-themed gradient background
-    val weatherGradient = Brush.verticalGradient(
-        colors = listOf(
-            Color(0xFF1a3a52),  // Deep ocean blue
-            Color(0xFF2d5a7b)   // Medium sky blue
-        )
-    )
-    
-    Box(
+    Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(weatherGradient),
-        contentAlignment = Alignment.Center
+            .background(Color(0xFF04121F))
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
+        // App branding
+        Text("Havaman.ai", color = Color.White, fontSize = 36.sp, modifier = Modifier.padding(bottom = 8.dp))
+        Text("AI Weather Intelligence", color = Color(0xFF4FD1C5), fontSize = 14.sp, modifier = Modifier.padding(bottom = 32.dp))
+        
         if (account == null) {
-            // Sign-In Screen
-            Column(
+            // Sign-In Button
+            Surface(
                 modifier = Modifier
-                    .fillMaxWidth(0.85f)
-                    .padding(24.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                    .fillMaxWidth()
+                    .height(56.dp)
+                    .clickable(onClick = onSignIn),
+                shape = RoundedCornerShape(12.dp),
+                color = Color.White
             ) {
-                // App Logo/Branding
                 Text(
-                    "Havaman",
-                    fontSize = 48.sp,
-                    color = Color.White,
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
-                Text(
-                    "AI",
-                    fontSize = 20.sp,
-                    color = Color(0xFF4FD1C5),
-                    modifier = Modifier.padding(bottom = 24.dp)
-                )
-                
-                // Tagline
-                Text(
-                    "AI-Powered Weather Intelligence",
+                    "Sign in with Google",
                     fontSize = 16.sp,
-                    color = Color(0xFFB8E0FF),
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
-                Text(
-                    "Real-time forecasts, health & travel guidance",
-                    fontSize = 13.sp,
-                    color = Color(0xFF9BB0CC),
-                    modifier = Modifier.padding(bottom = 48.dp)
-                )
-                
-                // Professional Google Sign-In Button
-                Surface(
+                    color = Color(0xFF1a1a1a),
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .height(56.dp)
-                        .clickable(onClick = onSignIn),
-                    shape = RoundedCornerShape(12.dp),
-                    color = Color.White
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(12.dp),
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            "Sign in with Google",
-                            fontSize = 16.sp,
-                            color = Color(0xFF1a1a1a)
-                        )
-                    }
-                }
-                
-                // Features info
-                Spacer(modifier = Modifier.height(48.dp))
-                Column(modifier = Modifier.fillMaxWidth()) {
-                    FeatureItem("📍", "Location-based insights")
-                    FeatureItem("🤖", "AI-driven recommendations")
-                    FeatureItem("⚡", "Real-time weather data")
-                }
+                        .fillMaxSize()
+                        .wrapContentSize(Alignment.Center)
+                )
             }
         } else {
-            // Logged-In Screen
-            Column(
+            // Welcome message
+            Text("Welcome, ${account.displayName}!", color = Color.White, fontSize = 20.sp, modifier = Modifier.padding(bottom = 24.dp))
+            
+            // Fetch Location Button
+            Button(
+                onClick = onFetchLocation,
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4FD1C5)),
                 modifier = Modifier
-                    .fillMaxWidth(0.9f)
-                    .padding(24.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                    .fillMaxWidth()
+                    .height(48.dp),
+                shape = RoundedCornerShape(10.dp)
             ) {
-                Text(
-                    "Welcome back!",
-                    fontSize = 28.sp,
-                    color = Color.White,
-                    modifier = Modifier.padding(bottom = 16.dp)
-                )
-                
-                Surface(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 16.dp),
-                    shape = RoundedCornerShape(12.dp),
-                    color = Color(0x19FFFFFF)
-                ) {
-                    Text(
-                        account.displayName?.let { "Hello, $it" } ?: "Hello, User",
-                        fontSize = 18.sp,
-                        color = Color.White,
-                        modifier = Modifier.padding(16.dp)
-                    )
-                }
-                
-                // Action Buttons
-                Button(
-                    onClick = onFetchLocation,
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4FD1C5)),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(48.dp),
-                    shape = RoundedCornerShape(10.dp)
-                ) {
-                    Text("Fetch My Location", color = Color.White, fontSize = 14.sp)
-                }
-                
-                Spacer(modifier = Modifier.height(12.dp))
-                
-                Button(
-                    onClick = onSignOut,
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF6B6B)),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(48.dp),
-                    shape = RoundedCornerShape(10.dp)
-                ) {
-                    Text("Sign Out", color = Color.White, fontSize = 14.sp)
-                }
+                Text("Fetch My Location", color = Color.White)
+            }
+            
+            Spacer(modifier = Modifier.height(12.dp))
+            
+            // Sign Out Button
+            Button(
+                onClick = onSignOut,
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF6B6B)),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(48.dp),
+                shape = RoundedCornerShape(10.dp)
+            ) {
+                Text("Sign Out", color = Color.White)
             }
         }
-    }
-}
-
-@Composable
-private fun FeatureItem(emoji: String, text: String) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(emoji, fontSize = 20.sp, modifier = Modifier.padding(end = 12.dp))
-        Text(text, fontSize = 14.sp, color = Color(0xFFB8E0FF))
     }
 }
 
