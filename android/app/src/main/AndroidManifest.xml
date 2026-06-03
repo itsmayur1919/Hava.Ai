@@ -8,8 +8,6 @@
     <application
         android:allowBackup="true"
         android:label="Havaman.ai"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Havaman">
         <!-- Google Maps API key placeholder. Replace with your real key in local.properties or directly here for testing. -->
