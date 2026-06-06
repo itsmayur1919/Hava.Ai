@@ -28,11 +28,9 @@ class MainActivity : ComponentActivity() {
 
             if (!signedIn) {
                 SignInScreen(
-                    account = null,
-                    onSignIn = {
+                    accountDisplayName = null,
+                    onSignIn = { username, password ->
                         lifecycleScope.launch {
-                            val username = "android_test"
-                            val password = "dev"
                             val success = try {
                                 postTestLogin(BACKEND_BASE + "/api/auth/test-login", username, password)
                             } catch (t: Throwable) {

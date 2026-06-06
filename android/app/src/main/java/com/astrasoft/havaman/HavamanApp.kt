@@ -16,6 +16,7 @@ import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.*
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -108,9 +109,10 @@ fun HavamanApp() {
 }
 
 @Composable
+@OptIn(ExperimentalMaterial3Api::class)
 fun SignInScreen(
-    account: com.google.android.gms.auth.api.signin.GoogleSignInAccount?,
-    onSignIn: () -> Unit,
+    accountDisplayName: String?,
+    onSignIn: (String, String) -> Unit,
     onSignOut: () -> Unit,
     onFetchLocation: () -> Unit
 ) {
@@ -125,30 +127,55 @@ fun SignInScreen(
         // App branding
         Text("Havaman.ai", color = Color.White, fontSize = 36.sp, modifier = Modifier.padding(bottom = 8.dp))
         Text("AI Weather Intelligence", color = Color(0xFF4FD1C5), fontSize = 14.sp, modifier = Modifier.padding(bottom = 32.dp))
-        
-        if (account == null) {
-            // Sign-In Button
-            Surface(
+        if (accountDisplayName == null) {
+            var username by remember { mutableStateOf("") }
+            var password by remember { mutableStateOf("") }
+
+            TextField(
+                value = username,
+                onValueChange = { username = it },
+                placeholder = { Text("Username") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(56.dp)
-                    .clickable(onClick = onSignIn),
-                shape = RoundedCornerShape(12.dp),
-                color = Color.White
-            ) {
-                Text(
-                    "Sign in with Google",
-                    fontSize = 16.sp,
-                    color = Color(0xFF1a1a1a),
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .wrapContentSize(Alignment.Center)
+                    .background(Color(0x16FFFFFF), RoundedCornerShape(18.dp)),
+                colors = TextFieldDefaults.textFieldColors(
+                    containerColor = Color(0x14FFFFFF),
+                    cursorColor = Color(0xFFB8E0FF)
                 )
+            )
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            TextField(
+                value = password,
+                onValueChange = { password = it },
+                placeholder = { Text("Password") },
+                visualTransformation = PasswordVisualTransformation(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color(0x16FFFFFF), RoundedCornerShape(18.dp)),
+                colors = TextFieldDefaults.textFieldColors(
+                    containerColor = Color(0x14FFFFFF),
+                    cursorColor = Color(0xFFB8E0FF)
+                )
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = { onSignIn(username.trim(), password) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4FD1C5)),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(48.dp),
+                shape = RoundedCornerShape(10.dp)
+            ) {
+                Text("Sign In", color = Color.White)
             }
         } else {
             // Welcome message
-            Text("Welcome, ${account.displayName}!", color = Color.White, fontSize = 20.sp, modifier = Modifier.padding(bottom = 24.dp))
-            
+            Text("Welcome, ${accountDisplayName}!", color = Color.White, fontSize = 20.sp, modifier = Modifier.padding(bottom = 24.dp))
+
             // Fetch Location Button
             Button(
                 onClick = onFetchLocation,
@@ -160,9 +187,9 @@ fun SignInScreen(
             ) {
                 Text("Fetch My Location", color = Color.White)
             }
-            
+
             Spacer(modifier = Modifier.height(12.dp))
-            
+
             // Sign Out Button
             Button(
                 onClick = onSignOut,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.astrasoft.havaman"
+    package="com.astrasoft.havaman.debug"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -13,10 +13,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
-        android:name="com.astrasoft.havaman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.astrasoft.havaman.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.astrasoft.havaman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.astrasoft.havaman.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -70,7 +70,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.astrasoft.havaman.androidx-startup"
+            android:authorities="com.astrasoft.havaman.debug.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

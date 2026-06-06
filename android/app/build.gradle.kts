@@ -20,6 +20,12 @@ android {
   }
 
   buildTypes {
+    debug {
+      // Use a different applicationId for debug builds so the APK can be
+      // installed alongside an existing release build signed with another key.
+      applicationIdSuffix = ".debug"
+    }
+
     release {
       isMinifyEnabled = false
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

@@ -393,7 +393,7 @@ ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/6
 		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
-permission#com.astrasoft.havaman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.astrasoft.havaman.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
@@ -403,7 +403,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
-uses-permission#com.astrasoft.havaman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.astrasoft.havaman.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
