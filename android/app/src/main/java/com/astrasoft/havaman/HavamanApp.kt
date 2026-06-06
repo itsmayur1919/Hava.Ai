@@ -23,12 +23,13 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
 
 @Composable
-fun HavamanApp() {
+fun HavamanApp(accountDisplayName: String? = null) {
     var searchQuery by remember { mutableStateOf(TextFieldValue("")) }
     var cityResults by remember { mutableStateOf(listOf<LocationSearchResult>()) }
     var selectedLocation by remember { mutableStateOf(Coordinates(18.59, 73.74)) }
@@ -56,9 +57,33 @@ fun HavamanApp() {
         color = Color(0xFF04121F)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Header()
+            if (!accountDisplayName.isNullOrBlank()) {
+                Text("Welcome, ${accountDisplayName}!", color = Color.White, fontSize = 28.sp)
+                Spacer(modifier = Modifier.height(8.dp))
+            } else {
+                Header()
+            }
 
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Weather Assistant Icon/Title
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text("☀️⛅", fontSize = 48.sp)
+                Spacer(modifier = Modifier.height(12.dp))
+                Text("Weather Assistant", color = Color.White, fontSize = 24.sp)
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    "Search any city or allow location access to get started",
+                    color = Color(0xFFB0C8DE),
+                    fontSize = 12.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
 
             SearchSection(
                 value = searchQuery,
@@ -89,7 +114,7 @@ fun HavamanApp() {
                 }
             }
 
-            Spacer(modifier = Modifier.height(18.dp))
+            Spacer(modifier = Modifier.height(16.dp))
 
             HeroPanel(wisdom, selectedLocation, isLoading)
             Spacer(modifier = Modifier.height(16.dp))

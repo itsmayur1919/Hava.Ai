@@ -25,6 +25,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             var signedIn by remember { mutableStateOf(false) }
+            var loggedInUser by remember { mutableStateOf<String?>(null) }
 
             if (!signedIn) {
                 SignInScreen(
@@ -36,14 +37,17 @@ class MainActivity : ComponentActivity() {
                             } catch (t: Throwable) {
                                 false
                             }
-                            if (success) signedIn = true
+                            if (success) {
+                                loggedInUser = username
+                                signedIn = true
+                            }
                         }
                     },
                     onSignOut = {},
                     onFetchLocation = {}
                 )
             } else {
-                HavamanApp()
+                HavamanApp(accountDisplayName = loggedInUser)
             }
         }
     }
