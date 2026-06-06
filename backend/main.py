@@ -1,7 +1,9 @@
 import asyncio
 from typing import Optional
+import os
 
 import httpx
+import uuid
 from fastapi import FastAPI, Depends, HTTPException, Request, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -13,17 +15,28 @@ from .models import User, SavedLocation
 
 app = FastAPI(title="Havaman.ai API")
 
-# CORS configuration for Capacitor and local dev
-origins = [
-    "capacitor://localhost",
-    "http://localhost",
-]
+# For local device testing we allow all origins; restrict in production.
+origins = ["*"]
 
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
+
+# Environment control: set TEST_SIGNIN_MODE=test to force test-login handling
+TEST_SIGNIN_MODE = os.environ.get("TEST_SIGNIN_MODE", "google").lower()
 
 
 class GoogleAuthIn(BaseModel):
     token: str
+
+
+class TestLoginIn(BaseModel):
+    username: Optional[str] = None
+    password: Optional[str] = None
+
+
+class AuthIn(BaseModel):
+    token: Optional[str] = None
+    username: Optional[str] = None
+    password: Optional[str] = None
 
 
 class LocationSearchOut(BaseModel):
@@ -35,9 +48,9 @@ class LocationSearchOut(BaseModel):
 
 @app.on_event("startup")
 async def startup():
-    # Ensure tables exist
-    # Use sync engine of async engine to create metadata
-    Base.metadata.create_all(bind=engine.sync_engine)
+    # Ensure tables exist using the async engine
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 
 @app.post("/api/auth/google")
@@ -97,6 +110,80 @@ async def google_auth(payload: GoogleAuthIn, session=Depends(get_session)):
             raise
 
     return {"status": "ok", "user_id": user.id}
+
+
+@app.post("/api/auth/test-login")
+async def test_login(payload: TestLoginIn, session=Depends(get_session)):
+    """
+    Testing-only endpoint: accepts a username/password (ignored) and creates or returns
+    a mock user. The user is stored with google_id set to "test:{username}" so it
+    reuses the existing user model requirements.
+    """
+    username = payload.username or f"user_{str(uuid.uuid4())[:8]}"
+    google_id = f"test:{username}"
+    email = f"{username}@example.com"
+    name = username
+    picture = None
+
+    async with AsyncSessionLocal() as db:
+        q = select(User).where(User.google_id == google_id)
+        res = await db.execute(q)
+        user = res.scalars().first()
+        if user:
+            user.email = email
+            user.full_name = name
+            db.add(user)
+            await db.commit()
+            await db.refresh(user)
+            return {"status": "ok", "user_id": user.id}
+
+        user = User(google_id=google_id, email=email, full_name=name, profile_pic=picture)
+        db.add(user)
+        try:
+            await db.commit()
+            await db.refresh(user)
+        except IntegrityError:
+            await db.rollback()
+            # try to fetch existing by email
+            q = select(User).where(User.email == email)
+            res = await db.execute(q)
+            existing = res.scalars().first()
+            if existing:
+                existing.google_id = google_id
+                db.add(existing)
+                await db.commit()
+                await db.refresh(existing)
+                return {"status": "ok", "user_id": existing.id}
+            raise
+
+    return {"status": "ok", "user_id": user.id}
+
+
+@app.post("/api/auth/login")
+async def unified_login(payload: AuthIn, session=Depends(get_session)):
+    """
+    Unified login endpoint for local testing. Behavior controlled by the
+    `TEST_SIGNIN_MODE` environment variable:
+      - "test": always use the test-login flow (username/password)
+      - "google": prefer Google token flow when `token` is provided
+    This makes it easy to point mobile devices at a local backend and
+    force a non-Google authentication flow during development.
+    """
+    mode = TEST_SIGNIN_MODE
+
+    # If mode is 'test', short-circuit to creating a test user
+    if mode == "test":
+        tl = TestLoginIn(username=payload.username, password=payload.password)
+        return await test_login(tl, session=session)
+
+    # Otherwise, if a Google token is provided, validate it
+    if payload.token:
+        ga = GoogleAuthIn(token=payload.token)
+        return await google_auth(ga, session=session)
+
+    # Fallback to test-login if no token provided
+    tl = TestLoginIn(username=payload.username, password=payload.password)
+    return await test_login(tl, session=session)
 
 
 @app.get("/api/location/search", response_model=list[LocationSearchOut])

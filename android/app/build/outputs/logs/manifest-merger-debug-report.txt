@@ -1,0 +1,457 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:1:1-23:12
+INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:1:1-23:12
+INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:1:1-23:12
+INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:1:1-23:12
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /home/mayur/.gradle/caches/transforms-3/e970b5a560435f820af2bc5c5674afdd/transformed/jetified-material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/5d371e00cf6abaed9e0c1d80ab4916b2/transformed/jetified-material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/e0e8717ff75d7e9a41d8792835daa4e0/transformed/jetified-material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/957b8f9f9ea5ff87343b28556fed800f/transformed/jetified-material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/7767acce714dbb026d8019456e79ab98/transformed/jetified-foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/3001edd620c43dc11888832f48ca2111/transformed/jetified-foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/23fa6f7178d28585ce3c4f5b3d3f6e2f/transformed/jetified-animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/9a044567b9051778b232dbc48a2dc9f0/transformed/jetified-animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/a7e7bcf3eba7997af938cb7c12b5cb33/transformed/jetified-ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/353018c30f100f73356b9cf314b7bfa6/transformed/jetified-ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/cd5a527817f12e1ee16f84afbf4e0de0/transformed/jetified-ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/1cd1d6d2fe3b735334fc8866b15077cd/transformed/jetified-ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/fcc0523ddef06172bffec13c74f41a7a/transformed/jetified-ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/7608ae1d2f7f55828563095d42ea1314/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/69c0ddc1f9d11338feeb4409ac30537c/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/95dfb13db737dbd4d8a1619e536b64dd/transformed/jetified-ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.material:material:1.11.0] /home/mayur/.gradle/caches/transforms-3/3586889a35934cbc2b47bb4a928b6f0e/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/mayur/.gradle/caches/transforms-3/daa3603f4547299ff3bfcbc1b9328d10/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/mayur/.gradle/caches/transforms-3/f181f83628af00d54263d831b121a2cd/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/mayur/.gradle/caches/transforms-3/40f6a2aded61279034fff3012aaf9c9a/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:17:1-40:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/mayur/.gradle/caches/transforms-3/e0fea91539bf2ddaddb6dd5e200ad439/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/mayur/.gradle/caches/transforms-3/4f792361d99283e6e5fd45cc316196bc/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/mayur/.gradle/caches/transforms-3/0b67f645597acbaec16d277faae61ed8/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /home/mayur/.gradle/caches/transforms-3/a42095aeeec1b90ccd0111b920fc1068/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/mayur/.gradle/caches/transforms-3/6664628a3565a0ddd08f8ea8bfb7d21e/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/mayur/.gradle/caches/transforms-3/1352c2f7ab3dc0bc251ed34763755e2e/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /home/mayur/.gradle/caches/transforms-3/67fcf729948f387e26fa25d8267b528b/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.9.0] /home/mayur/.gradle/caches/transforms-3/4202ca30dfb57689e810f69d3d5fa770/transformed/jetified-activity-1.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.9.0] /home/mayur/.gradle/caches/transforms-3/e0daddb3bb0addff8dd3a8e82dd96b6e/transformed/jetified-activity-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.9.0] /home/mayur/.gradle/caches/transforms-3/e412c07f12bf89d344d28b830ee0d643/transformed/jetified-activity-compose-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/mayur/.gradle/caches/transforms-3/8756f7e129582ef62e58c67bba909985/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/mayur/.gradle/caches/transforms-3/d1e09d52a9902f4ab7cd88573eb3649b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/mayur/.gradle/caches/transforms-3/8f6ed7f6eb9bc1185a913753d0061513/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /home/mayur/.gradle/caches/transforms-3/ee6f6955600c0d8ed05f1ecf35c0c1b3/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/mayur/.gradle/caches/transforms-3/ae769e5c761d82de1757eef5cad2010d/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/mayur/.gradle/caches/transforms-3/9a6447ffb76935594dd57a2abfd44f86/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/mayur/.gradle/caches/transforms-3/cea0125554752b32cb67b51372bdb405/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/mayur/.gradle/caches/transforms-3/b9097d0ba59d16c21ad1d0343bbe600b/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/mayur/.gradle/caches/transforms-3/a8f2ecdd84fc902ccb4053b9c4200645/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.0] /home/mayur/.gradle/caches/transforms-3/fa329689a7d3a829336b40bc4adcc661/transformed/jetified-core-ktx-1.13.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.0.0] /home/mayur/.gradle/caches/transforms-3/8a28027adbb6af9864fc7412290fa504/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/mayur/.gradle/caches/transforms-3/7025f101b71bdc17727317868317c243/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/mayur/.gradle/caches/transforms-3/ff6c5971b1d096684205b9fa0d599cde/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /home/mayur/.gradle/caches/transforms-3/9e426b28ab8c16e0dce4d87670cf1e03/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/mayur/.gradle/caches/transforms-3/08b04b824ad0d1bf9498a4cab79c4462/transformed/jetified-emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /home/mayur/.gradle/caches/transforms-3/bc985af70165e1df02ae1cda97553371/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/mayur/.gradle/caches/transforms-3/9c5ad5e86ec3845334d7926dd32a57df/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /home/mayur/.gradle/caches/transforms-3/c75bd661f382f4335649a4c17ee9435c/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/mayur/.gradle/caches/transforms-3/497ec2301af60d52a96daeba224510dc/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/mayur/.gradle/caches/transforms-3/f42dfcbdccf74bde0e263a7843ccd6de/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/mayur/.gradle/caches/transforms-3/6161a371c603db80b0e13720e5fcc635/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/mayur/.gradle/caches/transforms-3/8197601a4736be64a0c112b2b0a07bff/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/mayur/.gradle/caches/transforms-3/e3363a689d2074ee7fcf82b670454093/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/mayur/.gradle/caches/transforms-3/b1f8abf500baf1a712b28d6404e28a33/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/366936581f20f1f6d473d6df4827024e/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/8a78d6ebf29a8cf0ba3c9dbe217ae9e9/transformed/jetified-runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/mayur/.gradle/caches/transforms-3/9408717c145b73f0f4b2f762fc2e404f/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/mayur/.gradle/caches/transforms-3/3a7cedbb365a4cae27a4296346584f6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/mayur/.gradle/caches/transforms-3/e8a09d88b6efddd6d977c46514011f23/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/mayur/.gradle/caches/transforms-3/465010cbb98a936037ec2770e03117f3/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mayur/.gradle/caches/transforms-3/cc4ec75a2677a8f9ca5a7dd094feb56c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/mayur/.gradle/caches/transforms-3/486d07b87a0d759e993e4f25754b4bba/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/mayur/.gradle/caches/transforms-3/05b458670ecb519b3ffc0542c488b7ce/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/mayur/.gradle/caches/transforms-3/8554825cccbb2ab980b1792107b1de32/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/mayur/.gradle/caches/transforms-3/59321d7f76429bf953c4c53fca59c954/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/mayur/.gradle/caches/transforms-3/31f5a87da145d8da9892cad37314f213/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/mayur/.gradle/caches/transforms-3/b8292e2dcd49cb93285f5878aab73697/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+	package
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:2:5-36
+		INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:4:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:5:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:6:22-64
+application
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:8:5-22:19
+INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:8:5-22:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.material:material:1.11.0] /home/mayur/.gradle/caches/transforms-3/3586889a35934cbc2b47bb4a928b6f0e/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /home/mayur/.gradle/caches/transforms-3/3586889a35934cbc2b47bb4a928b6f0e/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/mayur/.gradle/caches/transforms-3/daa3603f4547299ff3bfcbc1b9328d10/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/mayur/.gradle/caches/transforms-3/daa3603f4547299ff3bfcbc1b9328d10/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/mayur/.gradle/caches/transforms-3/4f792361d99283e6e5fd45cc316196bc/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/mayur/.gradle/caches/transforms-3/4f792361d99283e6e5fd45cc316196bc/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/mayur/.gradle/caches/transforms-3/6664628a3565a0ddd08f8ea8bfb7d21e/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/mayur/.gradle/caches/transforms-3/6664628a3565a0ddd08f8ea8bfb7d21e/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/mayur/.gradle/caches/transforms-3/1352c2f7ab3dc0bc251ed34763755e2e/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/mayur/.gradle/caches/transforms-3/1352c2f7ab3dc0bc251ed34763755e2e/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/mayur/.gradle/caches/transforms-3/3a7cedbb365a4cae27a4296346584f6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/mayur/.gradle/caches/transforms-3/3a7cedbb365a4cae27a4296346584f6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mayur/.gradle/caches/transforms-3/cc4ec75a2677a8f9ca5a7dd094feb56c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mayur/.gradle/caches/transforms-3/cc4ec75a2677a8f9ca5a7dd094feb56c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:10:9-35
+	android:allowBackup
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:12:9-45
+meta-data#com.google.android.geo.API_KEY
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:14:9-109
+	android:value
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:14:66-106
+	android:name
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:14:20-65
+activity#com.astrasoft.havaman.MainActivity
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:15:9-21:20
+	android:exported
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:16:13-36
+	android:name
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:15:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:17:13-20:29
+action#android.intent.action.MAIN
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /home/mayur/.gradle/caches/transforms-3/e970b5a560435f820af2bc5c5674afdd/transformed/jetified-material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.0] /home/mayur/.gradle/caches/transforms-3/e970b5a560435f820af2bc5c5674afdd/transformed/jetified-material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/5d371e00cf6abaed9e0c1d80ab4916b2/transformed/jetified-material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/5d371e00cf6abaed9e0c1d80ab4916b2/transformed/jetified-material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/e0e8717ff75d7e9a41d8792835daa4e0/transformed/jetified-material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/e0e8717ff75d7e9a41d8792835daa4e0/transformed/jetified-material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/957b8f9f9ea5ff87343b28556fed800f/transformed/jetified-material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/957b8f9f9ea5ff87343b28556fed800f/transformed/jetified-material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/7767acce714dbb026d8019456e79ab98/transformed/jetified-foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/7767acce714dbb026d8019456e79ab98/transformed/jetified-foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/3001edd620c43dc11888832f48ca2111/transformed/jetified-foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/3001edd620c43dc11888832f48ca2111/transformed/jetified-foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/23fa6f7178d28585ce3c4f5b3d3f6e2f/transformed/jetified-animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/23fa6f7178d28585ce3c4f5b3d3f6e2f/transformed/jetified-animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/9a044567b9051778b232dbc48a2dc9f0/transformed/jetified-animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/9a044567b9051778b232dbc48a2dc9f0/transformed/jetified-animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/a7e7bcf3eba7997af938cb7c12b5cb33/transformed/jetified-ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/a7e7bcf3eba7997af938cb7c12b5cb33/transformed/jetified-ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/353018c30f100f73356b9cf314b7bfa6/transformed/jetified-ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/353018c30f100f73356b9cf314b7bfa6/transformed/jetified-ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/cd5a527817f12e1ee16f84afbf4e0de0/transformed/jetified-ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/cd5a527817f12e1ee16f84afbf4e0de0/transformed/jetified-ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/1cd1d6d2fe3b735334fc8866b15077cd/transformed/jetified-ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/1cd1d6d2fe3b735334fc8866b15077cd/transformed/jetified-ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/fcc0523ddef06172bffec13c74f41a7a/transformed/jetified-ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/fcc0523ddef06172bffec13c74f41a7a/transformed/jetified-ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/7608ae1d2f7f55828563095d42ea1314/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/7608ae1d2f7f55828563095d42ea1314/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/69c0ddc1f9d11338feeb4409ac30537c/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/69c0ddc1f9d11338feeb4409ac30537c/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/95dfb13db737dbd4d8a1619e536b64dd/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/95dfb13db737dbd4d8a1619e536b64dd/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /home/mayur/.gradle/caches/transforms-3/3586889a35934cbc2b47bb4a928b6f0e/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /home/mayur/.gradle/caches/transforms-3/3586889a35934cbc2b47bb4a928b6f0e/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/mayur/.gradle/caches/transforms-3/daa3603f4547299ff3bfcbc1b9328d10/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/mayur/.gradle/caches/transforms-3/daa3603f4547299ff3bfcbc1b9328d10/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/mayur/.gradle/caches/transforms-3/f181f83628af00d54263d831b121a2cd/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/mayur/.gradle/caches/transforms-3/f181f83628af00d54263d831b121a2cd/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/mayur/.gradle/caches/transforms-3/40f6a2aded61279034fff3012aaf9c9a/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/mayur/.gradle/caches/transforms-3/40f6a2aded61279034fff3012aaf9c9a/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/mayur/.gradle/caches/transforms-3/e0fea91539bf2ddaddb6dd5e200ad439/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/mayur/.gradle/caches/transforms-3/e0fea91539bf2ddaddb6dd5e200ad439/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/mayur/.gradle/caches/transforms-3/4f792361d99283e6e5fd45cc316196bc/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/mayur/.gradle/caches/transforms-3/4f792361d99283e6e5fd45cc316196bc/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/mayur/.gradle/caches/transforms-3/0b67f645597acbaec16d277faae61ed8/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/mayur/.gradle/caches/transforms-3/0b67f645597acbaec16d277faae61ed8/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /home/mayur/.gradle/caches/transforms-3/a42095aeeec1b90ccd0111b920fc1068/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /home/mayur/.gradle/caches/transforms-3/a42095aeeec1b90ccd0111b920fc1068/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/mayur/.gradle/caches/transforms-3/6664628a3565a0ddd08f8ea8bfb7d21e/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/mayur/.gradle/caches/transforms-3/6664628a3565a0ddd08f8ea8bfb7d21e/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/mayur/.gradle/caches/transforms-3/1352c2f7ab3dc0bc251ed34763755e2e/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/mayur/.gradle/caches/transforms-3/1352c2f7ab3dc0bc251ed34763755e2e/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /home/mayur/.gradle/caches/transforms-3/67fcf729948f387e26fa25d8267b528b/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/mayur/.gradle/caches/transforms-3/67fcf729948f387e26fa25d8267b528b/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.9.0] /home/mayur/.gradle/caches/transforms-3/4202ca30dfb57689e810f69d3d5fa770/transformed/jetified-activity-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.0] /home/mayur/.gradle/caches/transforms-3/4202ca30dfb57689e810f69d3d5fa770/transformed/jetified-activity-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] /home/mayur/.gradle/caches/transforms-3/e0daddb3bb0addff8dd3a8e82dd96b6e/transformed/jetified-activity-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] /home/mayur/.gradle/caches/transforms-3/e0daddb3bb0addff8dd3a8e82dd96b6e/transformed/jetified-activity-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.0] /home/mayur/.gradle/caches/transforms-3/e412c07f12bf89d344d28b830ee0d643/transformed/jetified-activity-compose-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.0] /home/mayur/.gradle/caches/transforms-3/e412c07f12bf89d344d28b830ee0d643/transformed/jetified-activity-compose-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/mayur/.gradle/caches/transforms-3/8756f7e129582ef62e58c67bba909985/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/mayur/.gradle/caches/transforms-3/8756f7e129582ef62e58c67bba909985/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/mayur/.gradle/caches/transforms-3/d1e09d52a9902f4ab7cd88573eb3649b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/mayur/.gradle/caches/transforms-3/d1e09d52a9902f4ab7cd88573eb3649b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/mayur/.gradle/caches/transforms-3/8f6ed7f6eb9bc1185a913753d0061513/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/mayur/.gradle/caches/transforms-3/8f6ed7f6eb9bc1185a913753d0061513/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /home/mayur/.gradle/caches/transforms-3/ee6f6955600c0d8ed05f1ecf35c0c1b3/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/mayur/.gradle/caches/transforms-3/ee6f6955600c0d8ed05f1ecf35c0c1b3/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/mayur/.gradle/caches/transforms-3/ae769e5c761d82de1757eef5cad2010d/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/mayur/.gradle/caches/transforms-3/ae769e5c761d82de1757eef5cad2010d/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/mayur/.gradle/caches/transforms-3/9a6447ffb76935594dd57a2abfd44f86/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/mayur/.gradle/caches/transforms-3/9a6447ffb76935594dd57a2abfd44f86/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/mayur/.gradle/caches/transforms-3/cea0125554752b32cb67b51372bdb405/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/mayur/.gradle/caches/transforms-3/cea0125554752b32cb67b51372bdb405/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/mayur/.gradle/caches/transforms-3/b9097d0ba59d16c21ad1d0343bbe600b/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/mayur/.gradle/caches/transforms-3/b9097d0ba59d16c21ad1d0343bbe600b/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/mayur/.gradle/caches/transforms-3/a8f2ecdd84fc902ccb4053b9c4200645/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/mayur/.gradle/caches/transforms-3/a8f2ecdd84fc902ccb4053b9c4200645/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.0] /home/mayur/.gradle/caches/transforms-3/fa329689a7d3a829336b40bc4adcc661/transformed/jetified-core-ktx-1.13.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] /home/mayur/.gradle/caches/transforms-3/fa329689a7d3a829336b40bc4adcc661/transformed/jetified-core-ktx-1.13.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /home/mayur/.gradle/caches/transforms-3/8a28027adbb6af9864fc7412290fa504/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /home/mayur/.gradle/caches/transforms-3/8a28027adbb6af9864fc7412290fa504/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/mayur/.gradle/caches/transforms-3/7025f101b71bdc17727317868317c243/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/mayur/.gradle/caches/transforms-3/7025f101b71bdc17727317868317c243/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/mayur/.gradle/caches/transforms-3/ff6c5971b1d096684205b9fa0d599cde/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/mayur/.gradle/caches/transforms-3/ff6c5971b1d096684205b9fa0d599cde/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /home/mayur/.gradle/caches/transforms-3/9e426b28ab8c16e0dce4d87670cf1e03/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/mayur/.gradle/caches/transforms-3/9e426b28ab8c16e0dce4d87670cf1e03/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/mayur/.gradle/caches/transforms-3/08b04b824ad0d1bf9498a4cab79c4462/transformed/jetified-emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/mayur/.gradle/caches/transforms-3/08b04b824ad0d1bf9498a4cab79c4462/transformed/jetified-emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /home/mayur/.gradle/caches/transforms-3/bc985af70165e1df02ae1cda97553371/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /home/mayur/.gradle/caches/transforms-3/bc985af70165e1df02ae1cda97553371/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/mayur/.gradle/caches/transforms-3/9c5ad5e86ec3845334d7926dd32a57df/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/mayur/.gradle/caches/transforms-3/9c5ad5e86ec3845334d7926dd32a57df/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /home/mayur/.gradle/caches/transforms-3/c75bd661f382f4335649a4c17ee9435c/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /home/mayur/.gradle/caches/transforms-3/c75bd661f382f4335649a4c17ee9435c/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/mayur/.gradle/caches/transforms-3/497ec2301af60d52a96daeba224510dc/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/mayur/.gradle/caches/transforms-3/497ec2301af60d52a96daeba224510dc/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/mayur/.gradle/caches/transforms-3/f42dfcbdccf74bde0e263a7843ccd6de/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/mayur/.gradle/caches/transforms-3/f42dfcbdccf74bde0e263a7843ccd6de/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/mayur/.gradle/caches/transforms-3/6161a371c603db80b0e13720e5fcc635/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/mayur/.gradle/caches/transforms-3/6161a371c603db80b0e13720e5fcc635/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/mayur/.gradle/caches/transforms-3/8197601a4736be64a0c112b2b0a07bff/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/mayur/.gradle/caches/transforms-3/8197601a4736be64a0c112b2b0a07bff/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/mayur/.gradle/caches/transforms-3/e3363a689d2074ee7fcf82b670454093/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/mayur/.gradle/caches/transforms-3/e3363a689d2074ee7fcf82b670454093/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/mayur/.gradle/caches/transforms-3/b1f8abf500baf1a712b28d6404e28a33/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/mayur/.gradle/caches/transforms-3/b1f8abf500baf1a712b28d6404e28a33/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/366936581f20f1f6d473d6df4827024e/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/366936581f20f1f6d473d6df4827024e/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/8a78d6ebf29a8cf0ba3c9dbe217ae9e9/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/8a78d6ebf29a8cf0ba3c9dbe217ae9e9/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/mayur/.gradle/caches/transforms-3/9408717c145b73f0f4b2f762fc2e404f/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/mayur/.gradle/caches/transforms-3/9408717c145b73f0f4b2f762fc2e404f/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/mayur/.gradle/caches/transforms-3/3a7cedbb365a4cae27a4296346584f6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/mayur/.gradle/caches/transforms-3/3a7cedbb365a4cae27a4296346584f6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/mayur/.gradle/caches/transforms-3/e8a09d88b6efddd6d977c46514011f23/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/mayur/.gradle/caches/transforms-3/e8a09d88b6efddd6d977c46514011f23/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/mayur/.gradle/caches/transforms-3/465010cbb98a936037ec2770e03117f3/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/mayur/.gradle/caches/transforms-3/465010cbb98a936037ec2770e03117f3/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mayur/.gradle/caches/transforms-3/cc4ec75a2677a8f9ca5a7dd094feb56c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mayur/.gradle/caches/transforms-3/cc4ec75a2677a8f9ca5a7dd094feb56c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/mayur/.gradle/caches/transforms-3/486d07b87a0d759e993e4f25754b4bba/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/mayur/.gradle/caches/transforms-3/486d07b87a0d759e993e4f25754b4bba/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/mayur/.gradle/caches/transforms-3/05b458670ecb519b3ffc0542c488b7ce/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/mayur/.gradle/caches/transforms-3/05b458670ecb519b3ffc0542c488b7ce/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/mayur/.gradle/caches/transforms-3/8554825cccbb2ab980b1792107b1de32/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/mayur/.gradle/caches/transforms-3/8554825cccbb2ab980b1792107b1de32/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/mayur/.gradle/caches/transforms-3/59321d7f76429bf953c4c53fca59c954/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/mayur/.gradle/caches/transforms-3/59321d7f76429bf953c4c53fca59c954/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/mayur/.gradle/caches/transforms-3/31f5a87da145d8da9892cad37314f213/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/mayur/.gradle/caches/transforms-3/31f5a87da145d8da9892cad37314f213/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/mayur/.gradle/caches/transforms-3/b8292e2dcd49cb93285f5878aab73697/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/mayur/.gradle/caches/transforms-3/b8292e2dcd49cb93285f5878aab73697/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/mayur/Desktop/Hava.Ai/android/app/src/main/AndroidManifest.xml
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/mayur/.gradle/caches/transforms-3/ecfa86d8c4e693dbeb339446e1ad0e4d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /home/mayur/.gradle/caches/transforms-3/702b1a162471f951e3a68c8afab535bc/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /home/mayur/.gradle/caches/transforms-3/31fd2fbef217147e9e2ca4e5c3ba857b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.2.0] /home/mayur/.gradle/caches/transforms-3/6455929567f44d8feba749c4bb40ee26/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mayur/.gradle/caches/transforms-3/cc4ec75a2677a8f9ca5a7dd094feb56c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mayur/.gradle/caches/transforms-3/cc4ec75a2677a8f9ca5a7dd094feb56c/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/mayur/.gradle/caches/transforms-3/0677d582df737c1fdf86ed18f81da594/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+permission#com.astrasoft.havaman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+uses-permission#com.astrasoft.havaman.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] /home/mayur/.gradle/caches/transforms-3/67cfafe6ae7461cbb01e4363508a1764/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/mayur/.gradle/caches/transforms-3/94f0a1e3b64d9a5c1cbaa944b0f5e49b/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/mayur/.gradle/caches/transforms-3/39fdd812e8c248e4d088039ff888d267/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

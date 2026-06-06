@@ -335,16 +335,4 @@ private fun RadarPreviewPanel(isLoading: Boolean) {
 }
 
 data class Coordinates(val latitude: Double, val longitude: Double)
-
-data class WeatherWisdom(
-    val health_card: String,
-    val travel_card: String,
-    val clothing_card: String,
-    val meta: WisdomMeta
-)
-
-data class WisdomMeta(val aqi: Int?, val uv: Double?, val temp: Double?)
-
-data class LocationSearchResult(val name: String, val latitude: Double, val longitude: Double, val country: String?)
-
 data class WisdomCardState(val title: String, val description: String, val tint: Color)

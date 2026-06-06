@@ -5,7 +5,6 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -13,85 +12,129 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-// Use emulator loopback by default. If testing on device, replace with backend host.
-private const val BASE_URL = "http://10.0.2.2:8000/"
+private const val OWM_BASE_URL = "https://api.openweathermap.org/"
+private const val SEARCH_LIMIT = 7
 
-interface ApiService {
-    @GET("api/location/search")
-    suspend fun searchLocation(@Query("q") q: String): List<LocationDto>
+interface OpenWeatherService {
+    @GET("geo/1.0/direct")
+    suspend fun searchLocation(
+        @Query("q") q: String,
+        @Query("limit") limit: Int = SEARCH_LIMIT,
+        @Query("appid") apiKey: String
+    ): List<GeocodingDto>
 
-    @GET("api/weather/wisdom")
-    suspend fun getWeatherWisdom(@Query("lat") lat: Double, @Query("lon") lon: Double): WeatherWisdomDto
+    @GET("data/2.5/weather")
+    suspend fun getCurrentWeather(
+        @Query("lat") lat: Double,
+        @Query("lon") lon: Double,
+        @Query("appid") apiKey: String,
+        @Query("units") units: String = "metric",
+        @Query("lang") lang: String = "en"
+    ): WeatherResponseDto
 }
 
-data class LocationDto(
+data class GeocodingDto(
+    val name: String,
+    val lat: Double,
+    val lon: Double,
+    val country: String?,
+    val state: String?
+)
+
+data class WeatherResponseDto(
+    val weather: List<WeatherDescriptionDto>,
+    val main: WeatherMainDto,
+    val wind: WindDto,
+    val sys: WeatherSysDto,
+    val name: String
+)
+
+data class WeatherDescriptionDto(val main: String, val description: String)
+
+data class WeatherMainDto(val temp: Double, val humidity: Int)
+
+data class WindDto(val speed: Double, val deg: Double)
+
+data class WeatherSysDto(val country: String)
+
+data class LocationSearchResult(
     val name: String,
     val latitude: Double,
     val longitude: Double,
     val country: String?
 )
 
-data class WeatherWisdomDto(
-    @Json(name = "health_card") val healthCard: String,
-    @Json(name = "travel_card") val travelCard: String,
-    @Json(name = "clothing_card") val clothingCard: String,
-    val meta: MetaDto
+data class WeatherWisdom(
+    val health_card: String,
+    val travel_card: String,
+    val clothing_card: String,
+    val meta: WisdomMeta
 )
 
-data class MetaDto(val aqi: Int?, val uv: Double?, val temp: Double?)
+data class WisdomMeta(val aqi: Int?, val uv: Double?, val temp: Double?)
+
+private val moshi: Moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+
+private val retrofit: Retrofit = Retrofit.Builder()
+    .baseUrl(OWM_BASE_URL)
+    .addConverterFactory(MoshiConverterFactory.create(moshi))
+    .client(
+        OkHttpClient.Builder()
+            .addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY })
+            .build()
+    )
+    .build()
+
+private val weatherService: OpenWeatherService = retrofit.create(OpenWeatherService::class.java)
 
 object BackendApi {
-    private var googleIdToken: String? = null
-
-    private val moshi: Moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-
-    private val httpClient: OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor(HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
-        })
-        .addInterceptor(Interceptor { chain ->
-            val originalRequest = chain.request()
-            val requestBuilder = originalRequest.newBuilder()
-            
-            // Add authentication header if token is available
-            googleIdToken?.let {
-                requestBuilder.addHeader("Authorization", "Bearer $it")
-            }
-            
-            chain.proceed(requestBuilder.build())
-        })
-        .build()
-
-    private val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .client(httpClient)
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
-        .build()
-
-    private val service: ApiService = retrofit.create(ApiService::class.java)
-
-    /**
-     * Set the Google ID token for authentication.
-     * Call this after successful Google Sign-In.
-     */
-    fun setGoogleIdToken(token: String?) {
-        googleIdToken = token
+    suspend fun searchLocation(query: String, apiKey: String = ""): List<LocationSearchResult> = withContext(Dispatchers.IO) {
+        val response = weatherService.searchLocation(query, apiKey = apiKey)
+        response.map {
+            LocationSearchResult(
+                name = listOfNotNull(it.name, it.state).joinToString(", "),
+                latitude = it.lat,
+                longitude = it.lon,
+                country = it.country
+            )
+        }
     }
 
-    /**
-     * Clear the authentication token on sign-out.
-     */
-    fun clearAuthentication() {
-        googleIdToken = null
-    }
+    suspend fun fetchWeatherWisdom(lat: Double, lon: Double, apiKey: String = "", language: String = "en"): WeatherWisdom = withContext(Dispatchers.IO) {
+        val response = weatherService.getCurrentWeather(lat, lon, apiKey = apiKey, lang = language)
+        val weatherDescription = response.weather.firstOrNull()?.description?.replaceFirstChar { it.uppercase() } ?: "Clear skies"
 
-    suspend fun searchLocation(query: String): List<LocationSearchResult> = withContext(Dispatchers.IO) {
-        val res = service.searchLocation(query)
-        res.map { LocationSearchResult(it.name, it.latitude, it.longitude, it.country) }
-    }
+        val temperature = response.main.temp
+        val humidity = response.main.humidity
+        val windSpeed = response.wind.speed
 
-    suspend fun fetchWeatherWisdom(lat: Double, lon: Double): WeatherWisdom = withContext(Dispatchers.IO) {
-        val dto = service.getWeatherWisdom(lat, lon)
-        WeatherWisdom(dto.healthCard, dto.travelCard, dto.clothingCard, WisdomMeta(dto.meta.aqi, dto.meta.uv, dto.meta.temp))
+        val healthCard = buildString {
+            append("Current conditions are $weatherDescription.")
+            if (humidity >= 80) append(" Humidity is high; stay hydrated.")
+            if (windSpeed >= 14) append(" Windy conditions are present.")
+        }
+
+        val travelCard = when {
+            response.weather.any { it.main.contains("rain", ignoreCase = true) || it.main.contains("storm", ignoreCase = true) } ->
+                "Rain or storm expected — choose covered transport and carry an umbrella."
+            windSpeed >= 16 ->
+                "Strong winds expected — be careful if traveling in open vehicles."
+            else ->
+                "Travel conditions look good for most routes."
+        }
+
+        val clothingCard = when {
+            temperature <= 5 -> "Very cold: wear insulated layers and a warm coat."
+            temperature <= 15 -> "Cool: wear a jacket and layered clothing."
+            temperature <= 25 -> "Mild: light layers are comfortable."
+            else -> "Hot: wear breathable fabrics and stay hydrated."
+        }
+
+        WeatherWisdom(
+            health_card = if (healthCard.isBlank()) "No specific health alerts." else healthCard,
+            travel_card = if (travelCard.isBlank()) "No travel advisories." else travelCard,
+            clothing_card = clothingCard,
+            meta = WisdomMeta(aqi = null, uv = null, temp = temperature)
+        )
     }
 }

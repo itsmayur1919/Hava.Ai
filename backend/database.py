@@ -1,8 +1,11 @@
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import declarative_base
+import os
 
-# Database URL points to PostgreSQL on port 5401 as requested
-DATABASE_URL = "postgresql+asyncpg://user:password@localhost:5401/hava"
+# Use DATABASE_URL env var if provided; otherwise fall back to a local sqlite file for dev/testing.
+DATABASE_URL = os.environ.get("DATABASE_URL")
+if not DATABASE_URL:
+    DATABASE_URL = "sqlite+aiosqlite:///./dev.db"
 
 # Async engine and session factory
 engine = create_async_engine(DATABASE_URL, future=True, echo=False, pool_pre_ping=True)
