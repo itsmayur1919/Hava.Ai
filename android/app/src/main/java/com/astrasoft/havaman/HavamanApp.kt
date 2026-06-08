@@ -139,7 +139,9 @@ fun SignInScreen(
     accountDisplayName: String?,
     onSignIn: (String, String) -> Unit,
     onSignOut: () -> Unit,
-    onFetchLocation: () -> Unit
+    onFetchLocation: () -> Unit,
+    isLoading: Boolean = false,
+    errorMessage: String? = null
 ) {
     Column(
         modifier = Modifier
@@ -193,9 +195,28 @@ fun SignInScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(48.dp),
-                shape = RoundedCornerShape(10.dp)
+                shape = RoundedCornerShape(10.dp),
+                enabled = !isLoading
             ) {
-                Text("Sign In", color = Color.White)
+                Text(if (isLoading) "Signing in..." else "Sign In", color = Color.White)
+            }
+
+            if (!errorMessage.isNullOrBlank()) {
+                Spacer(modifier = Modifier.height(12.dp))
+                Surface(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(Color(0x33FF6B6B), RoundedCornerShape(8.dp)),
+                    color = Color(0x33FF6B6B),
+                    shape = RoundedCornerShape(8.dp)
+                ) {
+                    Text(
+                        text = errorMessage,
+                        color = Color(0xFFFF6B6B),
+                        fontSize = 12.sp,
+                        modifier = Modifier.padding(12.dp)
+                    )
+                }
             }
         } else {
             // Welcome message

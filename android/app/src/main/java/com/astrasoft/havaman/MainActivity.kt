@@ -26,25 +26,37 @@ class MainActivity : ComponentActivity() {
         setContent {
             var signedIn by remember { mutableStateOf(false) }
             var loggedInUser by remember { mutableStateOf<String?>(null) }
+            var isLoading by remember { mutableStateOf(false) }
+            var errorMessage by remember { mutableStateOf<String?>(null) }
 
             if (!signedIn) {
                 SignInScreen(
                     accountDisplayName = null,
                     onSignIn = { username, password ->
                         lifecycleScope.launch {
+                            isLoading = true
+                            errorMessage = null
                             val success = try {
+                                android.util.Log.d("MainActivity", "Attempting login with username: $username")
                                 postTestLogin(BACKEND_BASE + "/api/auth/test-login", username, password)
                             } catch (t: Throwable) {
+                                android.util.Log.e("MainActivity", "Login error: ${t.message}", t)
+                                errorMessage = "Connection error: ${t.message}"
                                 false
                             }
                             if (success) {
                                 loggedInUser = username
                                 signedIn = true
+                            } else {
+                                errorMessage = "Invalid credentials or server error. Try xyz@gmail.com / 12345678"
                             }
+                            isLoading = false
                         }
                     },
                     onSignOut = {},
-                    onFetchLocation = {}
+                    onFetchLocation = {},
+                    isLoading = isLoading,
+                    errorMessage = errorMessage
                 )
             } else {
                 HavamanApp(accountDisplayName = loggedInUser)
@@ -64,6 +76,9 @@ class MainActivity : ComponentActivity() {
             }
 
             val payload = "{\"username\":\"${username}\",\"password\":\"${password}\"}"
+            android.util.Log.d("postTestLogin", "Sending to: $urlStr")
+            android.util.Log.d("postTestLogin", "Payload: $payload")
+            
             try {
                 BufferedOutputStream(conn.outputStream).use { out ->
                     out.write(payload.toByteArray(Charsets.UTF_8))
@@ -71,6 +86,8 @@ class MainActivity : ComponentActivity() {
                 }
 
                 val code = conn.responseCode
+                android.util.Log.d("postTestLogin", "Response code: $code")
+                
                 if (code in 200..299) {
                     BufferedReader(InputStreamReader(conn.inputStream)).use { reader ->
                         val sb = StringBuilder()
@@ -79,11 +96,22 @@ class MainActivity : ComponentActivity() {
                             sb.append(line)
                             line = reader.readLine()
                         }
-                        // simple check for a returned user_id or status
                         val body = sb.toString()
+                        android.util.Log.d("postTestLogin", "Response body: $body")
                         return@withContext (body.contains("\"status\":\"ok\"") || body.contains("user_id"))
                     }
+                } else {
+                    val errorStream = conn.errorStream
+                    if (errorStream != null) {
+                        BufferedReader(InputStreamReader(errorStream)).use { reader ->
+                            val errorBody = reader.readText()
+                            android.util.Log.e("postTestLogin", "Error response: $errorBody")
+                        }
+                    }
                 }
+                false
+            } catch (t: Throwable) {
+                android.util.Log.e("postTestLogin", "Exception: ${t.message}", t)
                 false
             } finally {
                 conn.disconnect()

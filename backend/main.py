@@ -115,13 +115,19 @@ async def google_auth(payload: GoogleAuthIn, session=Depends(get_session)):
 @app.post("/api/auth/test-login")
 async def test_login(payload: TestLoginIn, session=Depends(get_session)):
     """
-    Testing-only endpoint: accepts a username/password (ignored) and creates or returns
-    a mock user. The user is stored with google_id set to "test:{username}" so it
-    reuses the existing user model requirements.
+    Testing-only endpoint: accepts a username/password and creates or returns a mock user.
+    Hardcoded test credentials: xyz@gmail.com / 12345678 (for testing purposes).
+    The user is stored with google_id set to "test:{username}" so it reuses the existing user model requirements.
     """
     username = payload.username or f"user_{str(uuid.uuid4())[:8]}"
+    password = payload.password or ""
+    
+    # Hardcoded test credentials for development/testing
+    if username == "xyz@gmail.com" and password == "12345678":
+        username = "xyz@gmail.com"
+    
     google_id = f"test:{username}"
-    email = f"{username}@example.com"
+    email = username if "@" in username else f"{username}@example.com"
     name = username
     picture = None
 
